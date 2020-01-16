@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hanyuebb</groupId>
+        <artifactId>myblog-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../myblog-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>myblog-web</artifactId>
+    <packaging>jar</packaging>
+
+    <name>myblog-web</name>
+    <url>http://www.hanyuebb.com</url>
+    <inceptionYear>2020-JAR</inceptionYear>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hanyuebb</groupId>
+            <artifactId>myblog-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--SpringBoot热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.hanyuebb.myblog.web.WebApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

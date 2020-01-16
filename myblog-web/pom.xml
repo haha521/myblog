@@ -20,10 +20,10 @@
 
     <dependencies>
         <dependency>
-        <groupId>com.hanyuebb</groupId>
-        <artifactId>myblog-common</artifactId>
-        <version>${project.parent.version}</version>
-    </dependency>
+             <groupId>com.hanyuebb</groupId>
+             <artifactId>myblog-common</artifactId>
+             <version>${project.parent.version}</version>
+        </dependency>
         <!-- Spring Boot Begin -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -97,11 +97,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.hanyuebb.myblog.web.WebApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

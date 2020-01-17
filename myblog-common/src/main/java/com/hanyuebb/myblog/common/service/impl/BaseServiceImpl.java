@@ -32,18 +32,18 @@ public class BaseServiceImpl<T extends BaseDomain,D extends MyMapper<T>> impleme
 
     @Override
     @Transactional(readOnly = false)
-    public int delete(T t) {
-        return dao.delete(t);
+    public int deleteByPrimaryKey(Object o) {
+        return dao.deleteByPrimaryKey(o);
     }
 
     @Override
     @Transactional(readOnly = false)
-    public int update(T t) {
+    public int updateByPrimaryKey(T t) {
         return dao.updateByPrimaryKey(t);
     }
 
     @Override
-    public T selectOne(Object o) {
+    public T selectByPrimaryKey(Object o) {
         return dao.selectByPrimaryKey(o);
     }
 

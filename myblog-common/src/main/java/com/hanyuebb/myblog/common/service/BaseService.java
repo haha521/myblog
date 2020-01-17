@@ -14,11 +14,11 @@ import com.hanyuebb.myblog.common.domain.BaseDomain;
 public interface BaseService<T extends BaseDomain> {
     int insert(T t);
 
-    int delete(T t);
+    int deleteByPrimaryKey(Object o);
 
-    int update(T t);
+    int updateByPrimaryKey(T t);
 
-    T selectOne(Object o);
+    T selectByPrimaryKey(Object o);
 
     int selectCount(T t);
 
